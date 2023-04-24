@@ -10,10 +10,15 @@ createApp({
     },
 
     methods:{
-        
+        getApi(){
+            axios.get(this.apiUrl)
+            .then((result) =>{
+                console.log(result.data.response);
+            })
+        }
     },
 
     mounted(){
-        
+        this.getApi()
     }
 }).mount('#app');
